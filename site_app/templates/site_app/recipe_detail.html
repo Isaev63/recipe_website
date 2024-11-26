@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ recipe.title }}{% endblock %}
+
+{% block content %}
+    <div class="recipe-container">
+        <h1 class="recipe-title">{{ recipe.title }}</h1>
+
+        {% if recipe.image %}
+            <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image">
+        {% else %}
+            <p class="no-image">Нет изображения</p>
+        {% endif %}
+
+        <div class="recipe-info">
+            <p><strong>Автор:</strong> {{ recipe.author }}</p>
+            <p><strong>Время приготовления:</strong> {{ recipe.cooking_time }} минут</p>
+        </div>
+
+        <hr class="recipe-divider">
+
+        <h3 class="recipe-section-title">Описание</h3>
+        <p class="recipe-description">{{ recipe.description }}</p>
+
+        <h3 class="recipe-section-title">Шаги приготовления</h3>
+        <p class="recipe-steps">{{ recipe.cooking_steps }}</p>
+    </div>
+{% endblock %}

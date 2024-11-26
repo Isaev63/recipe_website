@@ -1,0 +1,409 @@
+/* Общие стили для навигации */
+.navbar {
+    background-color: #f8f9fa; /* Светлый фон */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd; /* Тонкая линия снизу */
+}
+
+/* Убираем стандартные отступы списка */
+.navbar-menu {
+    display: flex; /* Размещаем элементы в ряд */
+    list-style: none; /* Убираем маркеры списка */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для ссылок */
+.navbar-menu li {
+    margin-right: 15px; /* Отступы между ссылками */
+}
+
+.navbar-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #007bff; /* Синий цвет ссылки */
+    font-weight: 500; /* Полужирный шрифт */
+}
+
+.navbar-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #0056b3; /* Темнее при наведении */
+}
+
+/* Стили для контейнера регистрации */
+.registration-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Заголовок регистрации */
+.registration-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Форма регистрации */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Поля ввода */
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Кнопка отправки */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для helptext */
+.helptext {
+    font-size: 0.875rem; /* Уменьшенный размер шрифта */
+    color: #6c757d;      /* Светлый серый цвет */
+    margin-top: -3px;    /* Коррекция отступа сверху */
+    margin-bottom: 5px; /* Отступ снизу для визуального разделения */
+    display: block;      /* Новый абзац */
+}
+
+/* Стили для сообщений */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    background-color: #e9ecef;
+    padding: 3px;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.logout-button:hover {
+    text-decoration: none;
+}
+
+.btn-primary {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.recipe-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.recipe-form h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.messages {
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+    max-width: 600px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.message.success {
+    background-color: #4caf50;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+.message.info {
+    background-color: #2196f3;
+}
+
+.message.warning {
+    background-color: #ff9800;
+}
+
+/* Основные стили для контейнера */
+.recipe-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили заголовка */
+.recipe-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+/* Стили изображения */
+.recipe-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Если нет изображения */
+.no-image {
+    font-style: italic;
+    color: #aaa;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Информация о рецепте */
+.recipe-info {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.recipe-info strong {
+    font-weight: bold;
+}
+
+/* Разделитель */
+.recipe-divider {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Заголовки секций */
+.recipe-section-title {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Стили текста описания и шагов приготовления */
+.recipe-description,
+.recipe-steps {
+    margin-bottom: 20px;
+    white-space: pre-line;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Стили для футера */
+.footer {
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 40px; /* Отступ между main и footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень сверху */
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+/* Отступ для разделения контента и футера */
+main {
+    margin-bottom: 40px; /* Пространство над футером */
+}
+
+/* Общий контейнер для страницы редактирования */
+.edit-recipe-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.edit-recipe-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Формы и поля */
+.edit-recipe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-recipe-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.edit-recipe-form .form-group input,
+.edit-recipe-form .form-group textarea,
+.edit-recipe-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Кнопки */
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.btn-save:hover {
+    background-color: #45a049;
+}
+
+.btn-cancel:hover {
+    background-color: #d32f2f;
+}
+
+/* Ошибки */
+.form-errors {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffdddd;
+    border-left: 5px solid #f44336;
+    color: #d32f2f;
+    font-size: 14px;
+}
+
+.recipe-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.recipe-item {
+    margin: 10px 0;
+}
+
+.recipe-link {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.recipe-link:hover {
+    color: #2E7D32;
+}
+
+.no-recipes {
+    font-size: 16px;
+    color: #757575;
+    margin-top: 20px;
+}

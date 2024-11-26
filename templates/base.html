@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>{% block title %}Рецепты{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-menu">
+                <li><a href="{% url 'index' %}" class="navbar-link">Главная</a></li>
+                <li><a href="{% url 'create_recipe' %}" class="navbar-link">Создать рецепт</a></li>
+                <li><a href="{% url 'edit_recipe_list' %}" class="navbar-link">Редактировать рецепт</a></li>
+                {% if user.is_authenticated %}
+                    <li>
+                        <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="navbar-link logout-button">Выход</button>
+                        </form>
+                    </li>
+                {% else %}
+                    <li><a href="{% url 'login' %}" class="navbar-link">Вход</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+            <p>Скоро тут появится текст...</p>
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; {{ now|date:"Y" }} Рецепты. Все права защищены.</p>
+            <p><a href="#" target="_blank">Политика конфиденциальности</a> | <a href="#" target="_blank">Контакты</a></p>
+        </div>
+    </footer>
+</body>
+</html>

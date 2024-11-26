@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактирование рецепта{% endblock %}
+
+{% block content %}
+<div class="edit-recipe-container">
+    <h2>Редактирование рецепта</h2>
+
+    <form method="post" enctype="multipart/form-data" class="edit-recipe-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+            {{ recipe_form.as_p }}
+        </div>
+
+        {% if recipe_form.errors %}
+        <div class="form-errors">
+            {{ recipe_form.errors }}
+        </div>
+        {% endif %}
+
+        <button type="submit" class="btn-save">Сохранить изменения</button>
+        <a href="{% url 'recipe_detail' recipe_form.instance.id %}" class="btn-cancel">Отмена</a>
+    </form>
+</div>
+{% endblock %}
